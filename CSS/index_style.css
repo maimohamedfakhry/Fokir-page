@@ -18,6 +18,7 @@
   bottom: 30px;
   right: 30px;
   display: none;
+  z-index: 9999999999999999999999999999999999999999999;
   color: white;
   font-size: 30px;
   background-color: #ff305b;
@@ -89,6 +90,13 @@
   font-size: 70px;
   font-weight: bold;
 }
+@media (max-width: 992px) {
+  .caption h1 {
+    color: #ff305b;
+    font-size: 50px;
+    font-weight: bold;
+  }
+}
 .caption h3 {
   font-weight: bold;
   font-size: 30px;
@@ -101,7 +109,16 @@
   animation: mymove 10s infinite;
   -webkit-animation: mymove 7s infinite;
 }
-
+@media (max-width: 992px) {
+  .caption .edit h4::before {
+    font-weight: 400;
+    font-size: 18px;
+    content: "Professional Web Designer";
+    color: white;
+    animation: mymove 10s infinite;
+    -webkit-animation: mymove 7s infinite;
+  }
+}
 @keyframes mymove {
   0% {
     content: "Professional Web Designer|";
@@ -486,18 +503,24 @@
   }
   .about2 h1 {
     position: absolute;
-    top: 4.5%;
+    top: 3.5%;
     color: black;
     left: 2px;
   }
 }
-
+@media only screen and (max-width: 769px) {
+  .about2 h1 {
+    position: absolute;
+    top: 0.5%;
+    color: black;
+    left: 2px;
+  }
+}
 .clrr {
   clear: both;
 }
 .h1about2 {
   border: 2px solid #ff305b;
-
   height: 3px;
 }
 
@@ -516,6 +539,13 @@
   float: left;
   text-align: left;
 }
+@media (max-width: 500px) {
+  .about2 .ul1 li {
+    width: 100%;
+    float: left;
+    text-align: left;
+  }
+}
 .about2 .ul1 li span {
   font-weight: bold;
   color: black;
@@ -523,13 +553,15 @@
 .about2 .btns {
   color: white;
   margin-top: 20px;
+  width: 100%;
 }
 .about2 .btn1,
 .about2 .btn2 {
+  max-width: 50%;
   background-color: #ff305b;
-  padding: 10px 15px;
+  padding: 10px 6px;
   border: none;
-  border-radius: 10%;
+
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -827,7 +859,7 @@
 }
 .feedback .feed {
   margin-top: 20px;
-  border-radius: 2%;
+
   padding: 2%;
   margin-left: 14%;
   margin-right: 14%;
